@@ -1,9 +1,7 @@
 library(shiny)
 library(ggplot2)
 
-dataset <- mtcars
-
-sampleSize<-nrow(dataset)
+# sampleSize<-nrow(mtcars)
 
 shinyUI(fluidPage(
   
@@ -32,13 +30,13 @@ shinyUI(fluidPage(
   fluidRow(  
     sidebarPanel(
     
-      selectInput('x', 'X', names(dataset)),
-      selectInput('y', 'Y', names(dataset), names(dataset)[[2]]),
-      selectInput('color', 'Color', c('None', names(dataset))),
+      selectInput('x', 'X', names(mtcars)),
+      selectInput('y', 'Y', names(mtcars), names(mtcars)[[2]]),
+      selectInput('color', 'Color', c('None', names(mtcars))),
       
       checkboxInput('smooth', 'Smooth'),
       
-      selectInput('facet_row', 'Facet Row', c(None='.', names(dataset)))
+      selectInput('facet_row', 'Facet Row', c(None='.', names(mtcars)))
     ),
   
     mainPanel(
