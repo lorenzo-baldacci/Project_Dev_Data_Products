@@ -3,9 +3,7 @@ library(ggplot2)
 
 shinyServer(function(input, output) {
   
-    dataset <- reactive(function() {
-      mtcars
-    })
+    dataset <- reactive(function() {mtcars})
   
   output$plot <- reactivePlot(function() {
     
@@ -26,8 +24,6 @@ shinyServer(function(input, output) {
     
   }, height=700)
 
-  output$summary <- renderPrint({
-    summary(mtcars)
-  })  
+  output$top10 <- renderPrint({head(mtcars, n = 10)})  
   
 })
