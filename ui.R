@@ -24,7 +24,8 @@ shinyUI(fluidPage(
         tags$li("Smooth: tick this checkbox if you want to add a smoothed conditional mean"),
         tags$li("Facet Row: select the variable you want to use to split up your data and plot the subsets (facets) of data together.")
       ),
-      tags$hr()
+      tags$hr(),
+      h4("Let's Play!")
     )
   ),
   
