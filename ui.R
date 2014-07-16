@@ -23,7 +23,8 @@ shinyUI(fluidPage(
         tags$li("Facet Row: select the variable you want to use to split up your data and plot the subsets (facets) of data together.")
       ),
       tags$hr(),
-      h4("Let's Play!")
+      h4("Let's Play!"),
+      HTML("But remember, as this is a trial demo application the server will count your plots and restrict your session to 5 of them (of course you can close and open the application as many time as you like ;)")
     )
   ),
   
